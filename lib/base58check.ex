@@ -60,7 +60,7 @@ defmodule Base58Check do
   end
 
   defp generate_checksum(versioned_data) do
-    <<checksum::binary-size(4), _rest::binary-size(28)>> = :crypto(:sha256, :crypto(:sha256, versioned_data))
+    <<checksum::binary-size(4), _rest::binary-size(28)>> = :crypto.hash(:sha256, :crypto.hash(:sha256, versioned_data))
     checksum
   end
 end
