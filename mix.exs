@@ -26,6 +26,6 @@ defmodule Base58Check.Mixfile do
   end
 
   defp deps do
-    [{:erlsha2, github: "vinoski/erlsha2"}]
+    []
   end
 end
